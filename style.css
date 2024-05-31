@@ -1,15 +1,18 @@
+/* Genel stiller */
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
     color: #fff;
     background-color: #121212;
-    scroll-behavior: smooth;
+    overflow-x: hidden; /* Yatay kaydırmayı kaldırma */
 }
 
 .container {
-    width: 80%;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 header {
@@ -47,7 +50,7 @@ header nav ul li a {
 }
 
 .hero {
-    height: 100vh;
+    height: calc(100vh - 60px);
     background: #333;
     display: flex;
     align-items: center;
@@ -91,7 +94,38 @@ footer {
     text-align: center;
 }
 
-logotr {
-width: 10px;
-height: 10px;
+/* Mobil cihazlar için Medya Sorguları */
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+    }
+
+    .hero {
+        height: 100vh;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .services, .contact {
+        padding: 40px 0;
+    }
+
+    .service-item h3 {
+        font-size: 20px;
+    }
 }
+    .logotr{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
